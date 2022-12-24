@@ -1,8 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Monoton&family=Orbitron&family=Rubik+80s+Fade&family=Unbounded:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Monoton');
 @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap');
-
-
 * {
     margin: 0;
     padding: 0;
@@ -16,7 +14,7 @@ body {
     /*display: flex;
     justify-content: center;
     align-items: center;*/  
-    background-image: url("./wallpapersden.com_cool-4k-pattern_3840x2160.jpg");
+    background-image: url("./wallpapersden.com_cool-4k-pattern_3840x2160.webp");
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -25,10 +23,16 @@ body {
 }
 
 .h-1 {
+    display: flex;
+    justify-items: center;
+    justify-content: center;    
     width: 100%;
+    font-size: 6rem;
+    
 }
 
 .titi ,h1 {
+    
     width: 100%;
     display: flex;
     padding: 50px;
@@ -389,7 +393,7 @@ body {
 .mid {
     border-top: solid #000 7px;
     border-bottom: solid black 7px;
-        
+    margin-top : 60px;    
     
     font-family: 'Orbitron', sans-serif;
     position: relative;
@@ -423,8 +427,7 @@ body {
     grid-template-columns: 500px;
     grid-template-rows: 260;
     padding: 100px;
-    
-    
+       
 }
 
 .yo-1 {
@@ -432,6 +435,7 @@ body {
     padding: 50px ;
     border: 7px solid #FFACC7;
     border-radius: 10px;
+    box-shadow: 0 0 15px 2px rgba(231, 221, 221, 0.671);
     
 }
 
@@ -489,6 +493,11 @@ img {
     background-color: #434242;
     transition: .5s ease;
     border-bottom: 7px solid #50577A;
+    box-shadow: 0 0 20px #434242,
+            0 0 50px #434242,
+            0 0 85px #434242,
+            0 0 125px #434242;
+
 }
 
 
@@ -528,6 +537,10 @@ img {
     background-color: #FFDB89;
     transition: .5s ease ;
     border-bottom: 7px solid #D0B8A8;
+    box-shadow: 0 0 20px #FFDB89,
+            0 0 50px #FFDB89,
+            0 0 85px #FFDB89,
+            0 0 125px #FFDB89;
 }
 
 
@@ -559,6 +572,11 @@ img {
     background-color: #4B56D2;
     transition: .5s ease;
     border-bottom: 7px solid #472183;
+    box-shadow: 0 0 20px #4B56D2,
+            0 0 50px #4B56D2,
+            0 0 85px #4B56D2,
+            0 0 125px #4B56D2;
+    
 }
 
 
@@ -588,6 +606,10 @@ img {
     background-color: #E64848;
     transition: .5s ease;
     border-bottom: 7px solid #A8D1D1;
+        box-shadow: 0 0 20px #E64848,
+            0 0 50px #E64848,
+            0 0 85px #E64848,
+            0 0 125px #E64848;
 }
 
 .rd-0 {
@@ -630,6 +652,7 @@ img {
     transition: .5s ease;
     border-bottom:10px solid #FFE5F1;
     border-top:10px solid#FFE5F1;
+    /*box-shadow: 0 0 15px 2px rgba(231, 221, 221, 0.671);*/
 }
 
 
@@ -638,15 +661,15 @@ img {
 
 
 .borde {
-    display: grid;
+    /*display: grid;
     grid-template-columns: 250px 250px 250px;
     grid-template-rows: 80px auto 80px;
     column-gap: 10px;
-    row-gap: 15px;
+    row-gap: 15px;*/
 
     padding: 30px;
     margin: 30px;
-    height: 250px;
+    height: 300px;
         border: 5px solid #FA7070;
         border-top-left-radius: 20px;
         border-top-right-radius: 20px;
@@ -654,6 +677,15 @@ img {
         border-bottom-left-radius: 20px;
 }
 
+
+.form-2 {
+    display: grid;
+    grid-template-columns: 240px 240px 240px;
+    grid-template-rows: 80px 80px 80px;
+    column-gap: 20px;
+    row-gap: 10px;
+    
+}
 
 .form {
     width: 100%;
@@ -714,6 +746,12 @@ img {
 }
 
 .form input:focus+.lbl-nombre .text-nomb,
+.form input:valid+.lbl-nombre .text-nomb, .email-2 {
+    transform: translateX(0%);
+    }
+
+
+.form input:focus+.lbl-nombre .text-nomb,
 .form input:valid+.lbl-nombre .text-nomb {
     transform: translateY(-150%);
     font-size: 14px;
@@ -725,11 +763,7 @@ img {
     transform: translateX(0%);
 }
 
-@media only screen and (min-width:320px) and (max-width:768px) {
-    .form {
-        width: 85%;
-    }
-}
+
 
 .sometxt{
     color: white;
@@ -867,20 +901,21 @@ img {
 
 
 .botones {
-    display: grid;
-        justify-content: center;
-        
-        grid-template-columns: 300px 300px;
-    /*top: 50%;*/
+  
+    /*grid-template-columns: 300px 300px;*/
+        /*top: 50%;*/
     transform: translate(-50%, -50);
+    
     
     
 }
 
+
 .btn {
+
+    margin-left: 10px;
     color: white;
-    margin: 20px;
-    padding: 10px 30px;
+    padding: 10px;
     cursor: pointer;
     font-size: 14px;
     font-weight: bold;
@@ -891,12 +926,17 @@ img {
 
 .aceptar {
     background-color: #BCE29E;
+    width: 250px;
+    display: flex;
+        justify-content: center;
     
 }
 
 .cancelar {
+    display: flex;
+    justify-content: center;
     background-color: #FA7070;
-    
+    width: 250px;
 }
 
 .cancelar:hover {
@@ -913,4 +953,95 @@ img {
                 0 0 50px #BCE29E,
                 0 0 85px #BCE29E,
                 0 0 125px #BCE29E;
+}
+
+
+@media (max-width:380px) {
+
+.form-2 {
+        width: 150px;
+        display: flex;
+        flex-direction: column;
+
+    }
+
+
+    .borde {
+        height: 730px;
+        width: 250px;
+
+    }
+
+    .mydiv {
+        height: 1000px;
+        width: 300px;
+    }
+
+    .aceptar,
+    .cancelar {
+        width: 150px;
+    }
+
+    .container span {
+        font-size: 18px;
+    }
+
+
+
+.yo-1 {
+    width: 340px;
+    height: 530px;
+    
+   
+}
+
+
+
+
+.yo,.yo-2 {
+    padding: 40px;
+    margin-bottom: 70px;
+    margin-top: 200px;
+    display: flex;
+    flex-direction: column;
+}
+
+.dr{
+    height: 430px;
+    
+    
+}
+
+
+.rd {
+    display: flex;
+    flex-direction: column;
+}
+
+.mid{
+    width: 380px;
+    font-size: 2rem;
+}
+
+.h-1 {
+    font-size: 3rem;
+}
+
+.games {
+    margin-top: 400px;
+    display: flex; 
+    flex-direction: column-reverse;
+}
+
+.games-2 {
+    
+    font-size: 3rem;
+    display: flex;
+    justify-content: center;
+}
+
+.games-1{
+    margin-top: 50px;
+}
+
 }
