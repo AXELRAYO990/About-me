@@ -18,4 +18,19 @@ target.onclick = ({ target }) => neonGlory(target);
 
 
 
+const text = document.querySelector(".sec-text");
 
+const textLoad = () => {
+    setTimeout(() => {
+        text.textContent = "Front End";
+    }, 0);
+    setTimeout(() => {
+        text.textContent = "Streamer";
+    }, 2000);
+    setTimeout(() => {
+        text.textContent = "YouTuber";
+    }, 4000); //1s = 1000 milliseconds
+}
+
+textLoad();
+setInterval(textLoad, 6000);
